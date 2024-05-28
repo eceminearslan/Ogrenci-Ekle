@@ -1,0 +1,29 @@
+@model vize.Models.Ogrenci
+
+@{
+    ViewBag.Title = "Öğrenci Ekle";
+}
+
+<h2>Öğrenci Ekle</h2>
+
+<form asp-action="OgrenciEkle" method="post">
+    <div class="form-group">
+        <label asp-for="OgrenciAd">Öğrenci Adı</label>
+        <input asp-for="OgrenciAd" class="form-control" />
+        <span asp-validation-for="OgrenciAd" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="OgrenciSoyad">Öğrenci Soyadı</label>
+        <input asp-for="OgrenciSoyad" class="form-control" />
+        <span asp-validation-for="OgrenciSoyad" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BolumId">Bölüm</label>
+        <select asp-for="BolumId" class="form-control" asp-items="ViewBag.Bolumler"></select>
+        <span asp-validation-for="BolumId" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Ekle</button>
+
+
+</form>

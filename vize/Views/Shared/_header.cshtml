@@ -1,0 +1,33 @@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">vize</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-start align-items-center">
+                
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-action="Index" asp-controller="Home">Anasayfa <span
+                                class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="BolumEkle" asp-controller="Bolum">Bölüm Ekle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="OgrenciEkle" asp-controller="Ogrenci">Öğrenci Ekle</a>
+                    </li>
+                </ul>
+                <form class="form-inline" asp-controller="Ders" asp-action="Ara">
+                    <div class="input-group">
+                        <input class="form-control form-control-sm" type="search" placeholder="Ders Adı" aria-label="Search" name="dersAdi">
+                        <button class="btn btn-outline-success btn-sm" type="submit">Ara</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+

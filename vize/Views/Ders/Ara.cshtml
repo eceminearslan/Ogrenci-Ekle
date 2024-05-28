@@ -1,0 +1,37 @@
+@model List<vize.Models.Der>
+
+@{
+    ViewBag.Title = "Ders Ara";
+}
+
+<h2>Ders Ara</h2>
+
+
+@using (Html.BeginForm("Ara", "Ders", FormMethod.Post))
+{
+    <p>
+        Ders Adı: @Html.TextBox("dersAdi")
+        <input type="submit" value="Ara" />
+    </p>
+}
+
+@if (Model != null)
+{
+    <table class="table">
+        <tr>
+            <th>Ders Adı</th>
+            <th>Ders Kodu</th>
+        </tr>
+        @foreach (var ders in Model)
+        {
+            <tr>
+                <td>@ders.DersAd</td>
+                <td>@ders.DersId</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>Aradığınız ders bulunamadı.</p>
+}
